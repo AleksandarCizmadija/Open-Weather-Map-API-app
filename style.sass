@@ -1,0 +1,129 @@
+@mixin inspect()
+    border: 1px solid red
+@mixin txShadow()
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7) 
+@mixin transition()
+    transition: 0.3s linear  
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap')
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    &::before, &::after
+        box-sizing: border-box
+body 
+    font-family: 'Roboto', sans-serif
+    font-weight: 300 
+        
+.conatiner
+    display: flex
+    // justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100%
+    min-height: 100vh
+    color: #ffffff
+    background-image: url('https://i.ibb.co/nfRbtSQ/fog.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    z-index: 1
+    @include transition()
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,0.2)
+        z-index: -1
+    form
+        margin-top: 2rem
+        // padding: 10px 20px
+        display: flex
+        &>*
+            font-size: 1rem
+            padding: 0.7rem
+            border: none
+            outline: none
+            border: 1px solid rgba(0,0,0,0.5)
+        input 
+            border-top-left-radius: 8px
+            border-bottom-left-radius: 8px
+        button
+            border-top-right-radius: 8px
+            border-bottom-right-radius: 8px
+            cursor: pointer
+            @include transition()
+            &:hover 
+                background: rgba(0,0,0,0.1)
+    
+    .alert
+        padding: 1rem
+        margin-top: 1rem
+        border-radius: 8px
+
+    .loader 
+        margin-top: 2rem
+        width: 60px
+        height: 60px
+        border: 8px solid #ffffff
+        border-top: 8px solid #3498db
+        border-bottom: 8px solid #db3f34
+        border-radius: 50%
+        animation: spin 1s ease-in-out infinite
+        display: none
+
+    .header
+        padding-top: 1rem
+        text-align: center
+        text-transform: capitalize
+        margin-bottom: 1rem
+        @include txShadow()
+        h2 
+            font-size: 2.5rem
+            font-weight: 300
+        p 
+            font-size: 0.9rem
+        h1 
+            font-size: 3.5rem
+        img 
+            max-width: 100%
+            height: auto
+
+    .side
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        &>*
+            margin: 2rem 
+        .conditions
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 0.5rem
+            .condition 
+                border-radius: 8px
+                background: rgba(0,0,0,0.5)
+                padding: 1rem 2rem
+                text-align: center
+                span 
+                    font-size: 1rem
+                p 
+                    font-size: 1.5rem
+                    font-weight: 500
+        #map 
+            height: 250px
+            width: 350px
+            background: #000
+    footer 
+        position: absolute
+        margin-bottom: 1rem
+        bottom: 0
+
+@keyframes spin
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)

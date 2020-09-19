@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.conatiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  color: #ffffff;
+  background-image: url("https://i.ibb.co/nfRbtSQ/fog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.conatiner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.conatiner form {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.conatiner form > * {
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.conatiner form input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.conatiner form button {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.conatiner form button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.conatiner .alert {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.conatiner .loader {
+  margin-top: 2rem;
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ffffff;
+  border-top: 8px solid #3498db;
+  border-bottom: 8px solid #db3f34;
+  border-radius: 50%;
+  -webkit-animation: spin 1s ease-in-out infinite;
+          animation: spin 1s ease-in-out infinite;
+  display: none;
+}
+
+.conatiner .header {
+  padding-top: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.conatiner .header h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.conatiner .header p {
+  font-size: 0.9rem;
+}
+
+.conatiner .header h1 {
+  font-size: 3.5rem;
+}
+
+.conatiner .header img {
+  max-width: 100%;
+  height: auto;
+}
+
+.conatiner .side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.conatiner .side > * {
+  margin: 2rem;
+}
+
+.conatiner .side .conditions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.conatiner .side .conditions .condition {
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.conatiner .side .conditions .condition span {
+  font-size: 1rem;
+}
+
+.conatiner .side .conditions .condition p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.conatiner .side #map {
+  height: 250px;
+  width: 350px;
+  background: #000;
+}
+
+.conatiner footer {
+  position: absolute;
+  margin-bottom: 1rem;
+  bottom: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
