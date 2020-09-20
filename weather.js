@@ -1,6 +1,6 @@
 class Weather {
     constructor() {
-        this.apiCode = 'ff92b1013794c3020d316da5725313d8'
+        this.apiCode = 'API KEY'
     }
 
     async getWeather(city) {
